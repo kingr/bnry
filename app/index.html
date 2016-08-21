@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: BNRY Gallery ::</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="/app/bin/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="/app/bin/css/main.css">
+
+</head>
+<body>
+    <section class="preview-wrapper">
+        <div class="image-count-wrapper">
+            <p class="text-small"><span id="image-count">1</span> of 5</p>
+            <img src="/app/assets/img/image.svg" class="image-count">
+        </div>
+        <div class="image-wrapper">
+            <div id="spinner-wrapper">
+                <img src="/app/assets/img/spinner.svg" class="spinner" />
+            </div>
+            <img src="/app/assets/img/placeholder.png" id="img" class="image-gallery" onload="loadingDone()">
+        </div>
+        <!-- dom events -->
+        <img src="/app/assets/img/left-arrow.svg" class="img-nav-arrow-left" onclick="toggleClick('left')" onmouseover="hover('left')" onmouseleave="mouseleave('left')" />
+        <div class="text-preview" id="preview-left-wrapper"><p id="preview-left"></p></div>
+        <div class="text-preview" id="preview-right-wrapper"><p id="preview-right"></p></div>
+        <img src="/app/assets/img//right-arrow.svg" class="img-nav-arrow-right" onclick="toggleClick('right')" onmouseover="hover('right')" onmouseleave="mouseleave('right')"  />
+        <div class="screen-click left-half" onclick="toggleClick('left')"></div>
+        <div class="screen-click right-half" onclick="toggleClick('right')"></div>
+        <p id="img-desc"></p>
+    </section>
+
+
+</body>
+</html>
